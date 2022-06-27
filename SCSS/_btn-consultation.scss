@@ -1,108 +1,108 @@
 @import "vars";
 
 .btn-consultation {
-  margin-bottom: 150px;
-  max-width: 500px;
-  margin: 0 auto;
+    margin-bottom: 150px;
+    max-width: 500px;
+    margin: 0 auto;
 
-  &__link {
-    padding: 14px 68px 15px 68px;
-    font-family: $ff-poppins;
-    font-style: normal;
-    font-weight: $fw-bold;
-    font-size: 24px;
-    line-height: 46px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $f-color-white1;
-    background: $f-color-green;
-    border-radius: 50px;
-    transition: 1s;
-  }
+    &__link {
+        padding: 14px 68px 15px 68px;
+        font-family: $ff-poppins;
+        font-style: normal;
+        font-weight: $fw-bold;
+        font-size: 24px;
+        line-height: 46px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $f-color-white1;
+        background: $f-color-green;
+        border-radius: 50px;
+        transition: 1s;
+    }
 }
 
 .btn-consultation__link:hover {
-  color: $f-color-green;
-  background: $color-bg-white;
-  border: 1px solid $f-color-green;
-  transition: 1s;
+    color: $f-color-green;
+    background: $color-bg-white;
+    border: 1px solid $f-color-green;
+    transition: 1s;
 }
 
 .btn-consultation {
-  animation: btn-consultation 1.5s infinite alternate-reverse;
+    animation: btn-consultation 1.5s infinite alternate-reverse;
 }
 
 @keyframes btn-consultation {
-  0% {
-    transform: scale(0.9);
-  }
+    0% {
+        transform: scale(0.9);
+    }
 
-  100% {
-    transform: scale(1.2);
-  }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 @media screen and (max-width: 768.98px) {
-  .btn-consultation {
-    margin-bottom: 100px;
-    text-align: center;
+    .btn-consultation {
+        margin-bottom: 100px;
+        text-align: center;
 
-    &__link {
-      font-size: 24px;
-      line-height: 46px;
-      border-radius: 50px;
+        &__link {
+            font-size: 24px;
+            line-height: 46px;
+            border-radius: 50px;
+        }
     }
-  }
 
-  .btn-consultation__link:hover {
-    padding: 14px 179px 15px;
-    font-size: 24px;
-    line-height: 46px;
-  }
+    .btn-consultation__link:hover {
+        padding: 14px 179px 15px;
+        font-size: 24px;
+        line-height: 46px;
+    }
 }
 
 @media screen and (max-width: 650.98px) {
-  .btn-consultation {
-    margin-bottom: 100px;
-    text-align: center;
+    .btn-consultation {
+        margin-bottom: 100px;
+        text-align: center;
 
-    &__link {
-      padding: 12px 60px;
-      font-size: 20px;
-      line-height: 40px;
-      border-radius: 50px;
+        &__link {
+            padding: 12px 60px;
+            font-size: 20px;
+            line-height: 40px;
+            border-radius: 50px;
+        }
     }
-  }
 }
 
 @media screen and (max-width: 450.98px) {
-  .btn-consultation__link {
-    padding: 10px 50px;
-    font-size: 17px;
-    line-height: 30px;
-    border-radius: 50px;
-    text-align: center;
-  }
+    .btn-consultation__link {
+        padding: 10px 50px;
+        font-size: 17px;
+        line-height: 30px;
+        border-radius: 50px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 360.98px) {
-  .btn-consultation {
-    margin-bottom: 60px;
-    text-align: center;
+    .btn-consultation {
+        margin-bottom: 60px;
+        text-align: center;
 
-    .btn-consultation__link {
-      padding: 10px 35px;
-      font-size: 14px;
-      line-height: 20px;
-      border-radius: 50px;
-      margin: 0 auto;
-      text-align: center;
+        .btn-consultation__link {
+            padding: 10px 35px;
+            font-size: 14px;
+            line-height: 20px;
+            border-radius: 50px;
+            margin: 0 auto;
+            text-align: center;
 
-      &:hover {
-        padding: 10px 35px;
-        font-size: 14px;
-        line-height: 20px;
-      }
+            &:hover {
+                padding: 10px 35px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
     }
-  }
 }
