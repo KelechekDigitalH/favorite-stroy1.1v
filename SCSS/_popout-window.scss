@@ -1,0 +1,251 @@
+@import "vars";
+
+.popout {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(203, 199, 199, 0.5);
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 3;
+}
+
+.popout__container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popout.active {
+  visibility: visible;
+}
+
+.popout__body {
+  margin-top: 180px;
+  width: 1140px;
+  min-height: 495px;
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  color: #000;
+
+  position: relative;
+}
+
+.popout__close {
+  position: absolute;
+  top: 32px;
+  right: 56px;
+}
+
+.popout__logo {
+  position: absolute;
+  top: 186px;
+  left: 162px;
+}
+
+.popout__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 430px;
+  height: 100%;
+  background-color: $color-bg-dgreen;
+}
+
+.popout__form {
+  width: 65%;
+  padding: 0 102px 0 104px;
+  text-align: center;
+}
+.popout__title {
+  margin-top: 88px;
+  margin-bottom: 18px;
+}
+
+.popout__title-title {
+  font-family: $ff-poppins;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 28px;
+  line-height: 34px;
+  text-transform: uppercase;
+  letter-spacing: -0.06em;
+
+  color: $f-color-green;
+}
+
+.form-popout {
+  &__input {
+    margin-bottom: 21px;
+    padding: 17px 14px;
+    display: block;
+    width: 100%;
+
+    font-family: $ff-poppins;
+    font-style: normal;
+    font-weight: $fw-regular;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: $f-color-blue;
+    background: $color-bg-lblue;
+
+    border: 1px solid $color-bg-green;
+    border-radius: 6px;
+  }
+
+  ::-webkit-input-placeholder {
+    color: $f-color-dgreen;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+}
+
+.popout-consultation__btn {
+  display: block;
+  width: 100%;
+  padding: 17px 0 18px;
+
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: $fw-semiBold;
+  font-size: 14px;
+  line-height: 150%;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  color: $f-color-white2;
+  background: $f-color-green;
+  border-radius: 36px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.popout-consultation__link:hover {
+  color: $f-color-green;
+  background-color: $f-color-white2;
+  border: 1px solid $color-bg-green;
+}
+
+@media (max-width: 1150px) {
+  .popout__body {
+    width: 768px;
+    min-height: 432px;
+  }
+
+  //   .popout__close {
+  //     top: 24px;
+  //     right: 31px;
+  //   }
+
+  .popout__img {
+    width: 316px;
+    height: 432px;
+  }
+
+  .popout__logo {
+    width: 79.55px;
+    height: 93px;
+    top: 155px;
+    left: 118px;
+  }
+
+  .popout__overlay {
+    width: 316px;
+  }
+
+  .popout__form {
+    width: 65%;
+    padding: 0 26px 0 26px;
+  }
+
+  .popout__title {
+    margin-top: 74px;
+    margin-bottom: 20px;
+  }
+
+  .popout__title-title {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.001em;
+  }
+
+  .form-popout__input {
+    padding: 16px 9px;
+    margin-bottom: 15px;
+  }
+
+  .popout-consultation__btn {
+    width: 94%;
+    margin-left: 11px;
+  }
+}
+
+@media (max-width: 900px) {
+  .popout__body {
+    width: 361px;
+    min-height: 495px;
+
+    flex-direction: column;
+    position: relative;
+  }
+
+  .popout__close {
+    top: 30px;
+    right: 27px;
+    z-index: 2;
+  }
+
+  .popout__img {
+    width: 361px;
+    min-height: 495px;
+  }
+  .popout__logo {
+    display: none;
+  }
+
+  .popout__overlay {
+    width: 361px;
+  }
+
+  .popout__form {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 0 16px 0 14px;
+  }
+  .popout__title {
+    margin-top: 80px;
+    margin-bottom: 26px;
+  }
+
+  .popout__title-title {
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .form-popout__input {
+    padding: 10px 9px 11px;
+  }
+
+  .form-popout__input + .form-popout__input {
+    margin-top: 26px;
+  }
+
+  .popout-consultation__btn {
+    width: 79%;
+    margin: 30px 0 0 42px;
+  }
+}
