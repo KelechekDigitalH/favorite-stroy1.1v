@@ -1,47 +1,45 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 // Page styles
-
-@import "./SCSS/index";
-@import "./SCSS/header";
-@import "./SCSS/footer";
-@import "./SCSS/about-company";
-@import "./SCSS/popout-window";
-@import "./SCSS/owners";
-@import "./SCSS/objects";
-@import "./SCSS/page-title";
-@import "./SCSS/btn-consultation";
+@import "./scss/index";
+@import "./scss/header";
+@import "./scss/footer";
+@import "./scss/about-company";
+@import "./scss/popout-window";
+@import "./scss/owners";
+@import "./scss/objects";
+@import "./scss/page-title";
+@import "./scss/btn-consultation";
 
 body {
-  overflow-x: hidden;
-  min-height: 100%;
+    overflow-x: hidden;
+    min-height: 100%;
 }
 
 .container {
-  max-width: 1270px;
-  margin: 0 auto;
-  padding: 0 15px;
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 0 30px;
-    // overflow-x: hidden;
-  }
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
 }
 
 @media (max-width: 360px) {
-  .container {
-    max-width: 360px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+    .container {
+        max-width: 360px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 }
