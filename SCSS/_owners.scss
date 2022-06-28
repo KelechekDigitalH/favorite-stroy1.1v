@@ -2,7 +2,7 @@
 
 .title {
     font-size: 30px;
-    margin: 50px 0 50px;
+    margin: 50px 0 48px;
 }
 
 .accordion {
@@ -30,17 +30,17 @@ summary::-webkit-details-marker {
 }
 
 .accordion__title {
-    padding: 17px 77px 17px 31px;
+    padding: 17px 73px 17px 31px;
     font-family: $ff-poppins;
     font-style: normal;
     font-weight: $fw-medium;
     font-size: 24px;
     line-height: 40px;
-    letter-spacing: 0.033em;
     color: #111f66;
     position: relative;
     cursor: pointer;
     user-select: none;
+    letter-spacing: 0.7px;
 }
 
 .accordion__title::after {
@@ -58,6 +58,7 @@ summary::-webkit-details-marker {
     border-radius: 6px;
     width: 28px;
     height: 28px;
+    padding: 0 0 0 1.5px;
 }
 
 .accordion__item[open] .accordion__title::after {
@@ -68,11 +69,15 @@ summary::-webkit-details-marker {
     color: $f-color-green;
     border: 1px solid $f-color-green;
     border-radius: 6px;
-    padding: 0 0 0 4px;
+    padding: 0 0 0 2px;
+}
+
+.accordion__prg-inner {
+    padding: 0 87px 0 29px;
 }
 
 .accordion__txt {
-    padding: 12px 87px 30px 31px;
+    padding: 12px 0 30px 0;
     font-family: $ff-poppins;
     font-style: normal;
     font-weight: $fw-medium;
@@ -85,16 +90,16 @@ summary::-webkit-details-marker {
 }
 
 .form-input {
-    margin: 85px 0 140px 0;
+    margin: 91px 0 140px 0;
     background: $color-bg-grey;
 }
 
 .form-input__inner {
-    padding: 56px 0 63px 0;
+    padding: 52px 0 63px 0;
 }
 
 .form-input__title {
-    padding: 0 0 50px;
+    padding: 0 0 48px;
     font-family: $ff-poppins;
     font-style: normal;
     font-weight: $fw-bold;
@@ -118,7 +123,7 @@ summary::-webkit-details-marker {
 }
 
 .form-input__name {
-    margin: 0 0 18px 0;
+    margin: 0 0 12px 0;
 }
 
 .form-input__name,
@@ -204,7 +209,7 @@ summary::-webkit-details-marker {
     }
 
     .accordion__inner {
-        padding: 40px 15px 40.72px;
+        padding: 40px 0 40.72px;
     }
 
     .accordion__item {
@@ -226,7 +231,8 @@ summary::-webkit-details-marker {
         width: 26px;
         height: 26px;
         position: absolute;
-        right: 5px;
+        right: 15px;
+        padding: 0;
     }
 
     .accordion__item[open] .accordion__title::after {
@@ -235,8 +241,12 @@ summary::-webkit-details-marker {
         line-height: 24px;
     }
 
+    .accordion__prg-inner {
+        padding: 0 52px 0 14px;
+    }
+
     .accordion__txt {
-        padding: 11.07px 48px 11.07px 18px;
+        padding: 11px 0;
         font-size: 20px;
         line-height: 28px;
         letter-spacing: 0.7px;
@@ -251,8 +261,12 @@ summary::-webkit-details-marker {
         margin: 70px 0 95px 0;
     }
 
+    .form-input__name {
+        margin: 0 0 14px 0;
+    }
+
     .form-input__title {
-        padding: 0 0 40.53px 0;
+        padding: 0 0 45.53px 0;
         font-size: 28px;
         line-height: 34px;
     }
@@ -269,7 +283,7 @@ summary::-webkit-details-marker {
     }
 
     .form-input__link {
-        padding: 13.16px 115px;
+        padding: 13.16px 125px;
         font-size: 24px;
         line-height: 34px;
         border-radius: 29px;
@@ -329,24 +343,25 @@ summary::-webkit-details-marker {
     }
 
     .accordion__title::after {
-        display: inline-block;
-        content: "+";
-        font-size: 20px;
-        line-height: 24px;
-        width: 22px;
-        height: 24px;
-        position: absolute;
-        right: 5px;
+        width: 24px;
+        height: 20px;
+        font-size: 16px;
+        padding: 0 0 23px 0;
     }
 
     .accordion__item[open] .accordion__title::after {
-        content: "-";
-        font-size: 20px;
-        line-height: 24px;
+        width: 24px;
+        height: 20px;
+        font-size: 16px;
+        padding: 0 0 23px 0;
+    }
+
+    .accordion__prg-inner {
+        padding: 0 46px 0 14px;
     }
 
     .accordion__txt {
-        padding: 7px 46px 7px 20px;
+        padding: 7px 0 7px 0;
         font-size: 14px;
         line-height: 22px;
         letter-spacing: 0.7px;
@@ -358,14 +373,23 @@ summary::-webkit-details-marker {
 
     .form-input__title {
         max-width: 308px;
-        padding: 0 0 15px;
+        padding: 0 0 19px;
         font-size: 20px;
         line-height: 26px;
+        text-align: center;
+    }
+
+    .form-input__name--phone {
+        margin: 0 0 10px 0;
     }
 
     .form-input__form {
-        margin-bottom: 20px;
+        margin-bottom: 26px;
         padding: 0;
+    }
+
+    .form-input__name {
+        margin: 0 0 10px 0;
     }
 
     .form-input__name,
@@ -377,6 +401,7 @@ summary::-webkit-details-marker {
     .form-input__textarea {
         height: 167px;
         font-size: 14px;
+        padding: 7px 11px;
     }
 
     .form-input__submit {
