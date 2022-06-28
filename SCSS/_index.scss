@@ -1,254 +1,194 @@
 @import "./vars";
 
-//top screen
-.section-mbanner {
-    position: relative;
-    overflow: hidden;
+//Hero-topscreen
+
+.hero {
+  background: linear-gradient(to right bottom, #111f66 1%, #111f66 59%, #155146 76%, #1a911e 100%);
+  // position: relative;
+  
+  &__wrapper {
+    background: url(../assets/image/header/topScreen_bg_img.png) no-repeat 80%;
+    margin: 0 auto;
+  }
+
+  &__wrapper-inner {
     width: 100%;
-    height: 766px;
-    background: linear-gradient(to right bottom, #111f66 1%, #111f66 59%, #155146 76%, #1a911e 100%);
-    padding: 0;
-
-    &__bgimg {
-        position: relative;
-        margin-left: 359px;
-        margin-top: -773px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 0px 0;
+  }
 }
 
-@media (max-width: 768px) {
+.hero-left {
+  &__title {
+    max-width: 400px;
+    @include poppins;
+    font-size: 36px;
+    line-height: 46px;
+    color: $f-color-white1;
+    // letter-spacing: 1px;
+    word-spacing: 5px;
+  }
 
-    .section-mbanner {
-        width: 100%;
-        height: 627px;
-
-        &__bgimg {
-            width: 837px;
-            height: 838px;
-            position: relative;
-            margin-left: 206px;
-            margin-top: -612px;
-        }
-    }
-}
-
-@media (max-width: 360px) {
-    .section-mbanner {
-        width: 100%;
-        height: 626px;
-        margin-bottom: -36px;
-
-        &__bgimg {
-            display: none;
-        }
-
-        &__inner {
-            display: block;
-        }
-    }
-}
-
-.mbanner {
+  &__inner {
     width: 500px;
-    padding-top: 114px;
-    padding-bottom: 20.3rem;
-    position: absolute;
-    letter-spacing: 1.3px;
+    padding: 10px 0 0 0;
+  }
 
-    &__img {
-        position: relative;
-        margin-top: 36px;
-        margin-left: 646px;
-        z-index: 2;
-    }
-
-    &__title {
-        position: absolute;
-        width: 475px;
-        height: 183px;
-        font-size: 36px;
-        font-weight: $fw-bold;
-        font-family: $ff-poppins;
-        line-height: 46px;
-        color: #ffff;
-    }
-
-    &__descr {
-        font-size: 16px;
-        font-weight: $fw-bold;
-        font-family: $ff-poppins;
-        line-height: 24px;
-        letter-spacing: 0.45px;
-        margin-top: 178px;
-        margin-bottom: 96px;
-        color: #ffff;
-    }
-
-    &__call-to-us {
-        padding: 30px 40px 30px 40px;
-        border-radius: 6px;
-        background: rgba(255, 255, 255, 0.7);
-
-        &__title {
-            font-size: 22px;
-            font-weight: $fw-regular;
-            font-family: $ff-roboto;
-            text-align: center;
-            line-height: 2.5;
-            letter-spacing: 0.25px;
-            margin-top: -14px;
-        }
-    }
-
-    &__on-aline {
-        margin-left: 10px;
-        margin-top: 10px;
-        display: flex;
-        gap: 93px;
-        align-items: center;
-        letter-spacing: 1.07px;
-
-        &__icon {
-            width: 30px;
-            height: 30px;
-        }
-
-        &__call {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: $fw-regular;
-            font-family: $ff-roboto;
-            color: #000000;
-            z-index: 1;
-        }
-    }
+  &__description {
+    @include poppins;
+    font-size: 16px;
+    line-height: 24px;
+    color: $f-color-white1;
+    margin: 40px 0 0 0;
+    letter-spacing: 1px;
+    word-spacing: -3px;
+  }
 }
 
-@media (max-width: 768px) {
-    .mbanner {
-        margin-left: 30px;
-        width: 499px;
-        padding-top: 81px;
+.call-to-action {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 6px;
+  margin-top: 96px;
 
-        &__img {
-            width: 393px;
-            height: 389px;
-            margin-top: 108px;
-            margin-left: 333px;
-        }
+  &__title {
+    @include roboto;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: $f-color-black;
+  }
 
-        &__title {
-            position: absolute;
-            width: 499px;
-            height: 138px;
-            margin-left: -33px;
-        }
+  &__inner {
+    padding: 30px 0;
+  }
 
-        &__descr {
-            width: 285px;
-            height: 57px;
-            margin-left: -29px;
-            margin-bottom: 38px;
-        }
-
-        &__call-to-us {
-            width: 332px;
-            height: 200px;
-            padding: 30px 35px 29px 13px;
-            margin-left: -30px;
-
-            &__title {
-                font-size: 22px;
-                margin-top: -14px;
-            }
-        }
-
-        &__on-aline {
-            margin-left: 50px;
-            margin-top: 10px;
-            display: block;
-
-            &__icon {
-                width: 30px;
-                height: 30px;
-            }
-
-            &__call {
-                margin-bottom: 30px;
-                margin-left: -14px;
-            }
-        }
-    }
-
+  &__options {
+    width: 80%;
+    margin: 25px auto 0 auto;
+  }
 }
 
-@media (max-width: 360px) {
-    .mbanner {
-        margin: 0 auto;
-        width: 499px;
-        padding-top: 14px;
 
-        &__img {
-            width: 270px;
-            height: 266px;
-            margin-top: 164px;
-            margin-left: 29px;
-        }
 
-        &__title {
-            position: absolute;
-            width: 330px;
-            height: 90px;
-            margin-top: 20px;
-            margin-left: 0px;
-            font-size: 24px;
-            line-height: 30px;
-        }
-
-        &__descr {
-            width: 252px;
-            height: 24px;
-            margin-left: 0px;
-            margin-top: 90px;
-            margin-bottom: 70px;
-            padding: 30px 0 30px;
-            font-size: 12px;
-        }
-
-        &__call-to-us {
-            width: 332px;
-            height: 148px;
-            padding: 12px 29px 8px 2px;
-            margin-left: -1px;
-            margin-top: 277px;
-            text-align: center;
-
-            &__title {
-                font-size: 20px;
-            }
-        }
-
-        &__on-aline {
-            margin-left: 86px;
-            margin-top: 0;
-            display: block;
-
-            &__call {
-                margin-bottom: 20px;
-                margin-top: 3px;
-                margin-left: 4px;
-                font-size: 20px;
-            }
-
-            &__icon {
-                margin-right: 5px;
-            }
-        }
-    }
+.options-link-call,
+.options-link-write {
+  @include roboto;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #000000;
+  text-decoration: none;
+  display:inline-block;
+  vertical-align: middle;
 }
+
+.options-link-call {
+  margin-right: 99px;
+}
+
+.options-link-call::before {
+  content: url('../assets/image/main/call.svg');
+  position: relative;
+  top: 6px;
+  margin-right: 5px;
+}
+
+.options-link-write::before {
+  content: url('../assets/image/main/whatsapp.svg');
+  position: relative;
+  top: 6px;
+  margin-right: 5px;
+}
+
+
+.hero-right {
+  &__img-wrapper {
+    width: 593px;
+    height: 588px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+
+
+// @media (max-width: 360px) {
+//   .mbanner {
+//     margin: 0 auto;
+//     width: 499px;
+//     padding-top: 14px;
+
+//     &__img {
+//       width: 270px;
+//       height: 266px;
+//       margin-top: 164px;
+//       margin-left: 29px;
+//     }
+
+//     &__title {
+//       position: absolute;
+//       width: 330px;
+//       height: 90px;
+//       margin-top: 20px;
+//       margin-left: 0px;
+//       font-size: 24px;
+//       line-height: 30px;
+//     }
+
+//     &__descr {
+//       width: 252px;
+//       height: 24px;
+//       margin-left: 0px;
+//       margin-top: 90px;
+//       margin-bottom: 70px;
+//       padding: 30px 0 30px;
+//       font-size: 12px;
+//     }
+
+//     //call-to-us
+
+//     &__call-to-us {
+//       width: 332px;
+//       height: 148px;
+//       padding: 12px 29px 8px 2px;
+//       margin-left: -1px;
+//       margin-top: 277px;
+//       text-align: center;
+
+//       &__title {
+//         font-size: 20px;
+//         // margin-top: 8px;
+//         // margin-left: 13px;
+//       }
+//     }
+
+//     &__on-aline {
+//       margin-left: 86px;
+//       margin-top: 0;
+//       display: block;
+
+//       &__call {
+//         margin-bottom: 20px;
+//         margin-top: 3px;
+//         margin-left: 4px;
+//         font-size: 20px;
+//       }
+
+//       &__icon {
+//         margin-right: 5px;
+//       }
+//     }
+//   }
+
+// }
 
 //Navigation
 .navigation-blc {
