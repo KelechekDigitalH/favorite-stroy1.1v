@@ -1,10 +1,10 @@
-@import "vars";
+@import "./vars";
 
 .page-title {
     font-family: $ff-poppins;
     font-style: normal;
-    font-weight: $fw-extraBold;
-    font-size: 27px;
+    font-weight: $fw-semiBold;
+    font-size: 30px;
     line-height: 80px;
     text-transform: uppercase;
     text-align: center;
@@ -48,7 +48,6 @@
         align-items: center;
         font-size: 30px;
         line-height: 40px;
-        letter-spacing: -2px;
     }
 
     .page-title::before,
@@ -64,7 +63,6 @@
         align-items: center;
         font-size: 30px;
         line-height: 40px;
-        letter-spacing: -2px;
     }
 
     .page-title::before,
@@ -89,7 +87,6 @@
         align-items: center;
         font-size: 25px;
         line-height: 35px;
-        letter-spacing: -2px;
     }
 
     .page-title::before,
