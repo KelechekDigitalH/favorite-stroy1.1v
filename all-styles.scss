@@ -1,3 +1,5 @@
+@import url("fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap");
+
 *,
 *::after,
 *::before {
@@ -23,6 +25,10 @@ body {
   min-height: 100%;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1270px;
   margin: 0 auto;
@@ -34,7 +40,6 @@ body {
     max-width: 768px;
     margin: 0 auto;
     padding: 0 30px;
-    // overflow-x: hidden;
   }
 }
 
