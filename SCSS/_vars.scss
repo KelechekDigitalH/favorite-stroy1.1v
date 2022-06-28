@@ -38,4 +38,17 @@ $f-color-dgreen: rgba(26, 145, 30, 0.45);
 $f-color-light: #fefefe;
 $f-color-grey: rgba(254, 254, 254, 1);
 $f-color-grey2: #8e8e8e;
+$f-color-black: #000000;
 
+
+@mixin roboto {
+    font-family: $ff-roboto;
+    font-weight: $fw-regular;
+    font-style: normal;
+}
+
+@mixin poppins {
+    font-family: $ff-poppins;
+    font-weight: $fw-bold;
+    font-style: normal;
+}

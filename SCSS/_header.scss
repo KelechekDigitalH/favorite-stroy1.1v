@@ -4,15 +4,11 @@
 
 .header-up {
     background-color: $color-bg-blue;
-  
-    &__wrapper {
-        background: url(../assets/image/header/header-up-banner.jpg) no-repeat center; 
     
-    }
-    // &__wrapper {
-    //     background: url(../assets/image/header/heder_bg_img.png) no-repeat 90%; 
+    &__wrapper {
+        background: url(../assets/image/header/heder_bg_img.png) no-repeat 80%; 
          
-    // }
+    }
 }
 
 .header-contacts {
