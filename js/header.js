@@ -21,3 +21,8 @@ const menuBtn2 = document.querySelector('.popup-btn2');
 
 
 
+    const menuBtn2 = document.querySelector('.popup-btn2');
+    menuBtn2.addEventListener("click", (item) => {
+        burger.classList.toggle('active');
+        menu.classList.toggle('active');
+    });

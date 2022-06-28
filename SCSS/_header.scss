@@ -1,4 +1,4 @@
-@import "vars";
+@import "./vars";
 
 // HEADER-UP
 
@@ -403,7 +403,6 @@
         font-size: 20px;
         line-height: 28px;
     }
-  }
 
     .menu__btn-contact {
         margin: 36px 0 35px 50px;
@@ -429,8 +428,8 @@
     .burger::after {
         height: 20%;
     }
+   }
 }
-
 
 @media (max-width: 360px) {
 
