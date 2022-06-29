@@ -38,12 +38,12 @@ body._lock {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 768px;
+    // max-width: 768px;
     margin: 0 auto;
     padding: 0 30px;
   }
     .container {
-        max-width: 768px;
+        // max-width: 768px;
         margin: 0 auto;
         padding: 0 30px;
     }
@@ -51,7 +51,7 @@ body._lock {
 
 @media (max-width: 360px) {
     .container {
-        max-width: 360px;
+        // max-width: 360px;
         margin: 0 auto;
         padding: 0 15px;
     }

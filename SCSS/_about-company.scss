@@ -85,15 +85,51 @@
     .about-us {
         height: 828px;
 
+        &__logo {
+            width: 209px;
+            height: 94.1px;
+            margin: 47px 0 16px 0;
+        }
+
         &__banner {
+            &__content {
+                max-width: 438px;
+            }
+
             &__txt {
                 font-size: 24px;
+            }
+
+            &__text-block {
+                padding: 0px 24px 0 30px;
             }
 
             &__txt-upper {
                 font-weight: 600;
             }
+
         }
+    }
+}
+
+@media (max-width: 936px) {
+    .about-us {
+        height: 789px;
+        width: 996px;
+
+        &__banner {
+            &__content {
+                max-width: 505px;
+            }
+
+            &__txt {
+                font-size: 22px;
+                line-height: 30px;
+                letter-spacing: 0.01em;
+            }
+        }
+
+
     }
 }
 
@@ -116,11 +152,29 @@
 
 @media (max-width: 500px) {
     .about-us {
-        height: 731px;
+        height: 563px;
+
+        &__logo {
+            width: 150px;
+            height: 56px;
+            margin: 0 auto;
+            display: block;
+            margin-top: 20px;
+        }
 
         &__banner {
+
+            &__text-block {
+                padding: 0px 160px 0 16px;
+            }
+
             &__txt {
                 font-size: 16px;
+                margin-top: 30px;
+            }
+
+            &__txt+&__txt {
+                margin-top: 17px;
             }
         }
     }
@@ -190,6 +244,7 @@
     .experience {
         &__content {
             display: block;
+            margin-top: 53px;
         }
 
         &__img {
@@ -213,11 +268,11 @@
             font-size: 96px;
 
             &__26 {
-                padding-left: 44px;
+                padding-left: 0px;
             }
 
             &__43 {
-                padding-left: 35px;
+                padding-left: 22px;
             }
         }
     }
@@ -238,6 +293,7 @@
         &__img {
             width: 330px;
             height: 224px;
+            margin-top: -10px;
         }
 
         &__txt-small {
@@ -274,6 +330,10 @@
 
 .mission {
     margin-top: 138px;
+
+    &_title {
+        display: none;
+    }
 
     &__main {
         min-height: 640px;
@@ -328,10 +388,16 @@
 
 @media (max-width: 1160px) {
     .mission {
+        &__main {
+            min-height: 535px;
+        }
+
         margin-bottom: 210px;
+        margin-top: 88px;
 
         &__content {
             display: block;
+            padding-top: 41px;
         }
 
         &__txt {
@@ -340,8 +406,20 @@
             line-height: 30px;
         }
 
+        &__txt-bold {
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        &__txt-bold2 {
+            font-weight: 500;
+            margin-top: 0px !important;
+            text-transform: uppercase;
+        }
+
         &__txt-blc {
-            height: 311px;
+            height: 221px;
         }
 
         &-img-blc {
@@ -380,19 +458,41 @@
 
 @media (max-width: 500px) {
     .mission {
+        margin-top: 2px;
+        margin-bottom: 135px;
+        &__content {
+            padding-top: 23px;
+        }
+        &_headtitle {
+            display: none !important;
+        }
+        &_title {
+            margin-bottom: 23px;
+            display: block;
+            font-family: $ff-poppins;
+            font-weight: 700;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
         &__main {
-            min-height: 513px;
+            min-height: 485px;
         }
 
         &__img {
             width: 330px;
             height: 225px;
-            top: 16px;
+            top: 125px;
         }
 
         &__txt {
             font-size: 16px;
             line-height: 26px;
+        }
+        &__txt+&__txt {
+            margin-top: 16px;
         }
 
         &__txt-bold {
@@ -400,7 +500,7 @@
             font-size: 16px;
         }
 
-        &__txt-bold {
+        &__txt-bold2 {
             font-weight: 700;
             font-size: 16px;
         }
