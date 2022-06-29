@@ -4,47 +4,43 @@
 
 .hero {
   background: linear-gradient(to right bottom, #111f66 1%, #111f66 59%, #155146 76%, #1a911e 100%);
-  // position: relative;
   
   &__wrapper {
-    background: url(../assets/image/header/topScreen_bg_img.png) no-repeat 80%;
-    margin: 0 auto;
+    background: url(../assets/images/header/topScreen_bg_img.png) no-repeat;
+    background-position-x: 80%;
   }
 
   &__wrapper-inner {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0 0px 0;
+    padding: 40px 0 142px 0;
   }
 }
 
 .hero-left {
-  &__title {
-    max-width: 400px;
-    @include poppins;
-    font-size: 36px;
-    line-height: 46px;
-    color: $f-color-white1;
-    // letter-spacing: 1px;
-    word-spacing: 5px;
-  }
+    &__inner {
+        width: 500px;
+    }  
+    &__title {
+        max-width: 400px;
+        @include poppins;
+        font-size: 36px;
+        line-height: 46px;
+        color: $f-color-white1;
+        word-spacing: 5px;
+    }
 
-  &__inner {
-    width: 500px;
-    padding: 10px 0 0 0;
-  }
 
-  &__description {
-    @include poppins;
-    font-size: 16px;
-    line-height: 24px;
-    color: $f-color-white1;
-    margin: 40px 0 0 0;
-    letter-spacing: 1px;
-    word-spacing: -3px;
-  }
+    &__description {
+        @include poppins;
+        font-size: 16px;
+        line-height: 24px;
+        color: $f-color-white1;
+        margin: 40px 0 0 0;
+        letter-spacing: 1px;
+        word-spacing: -3px;
+    }
 }
 
 .call-to-action {
@@ -67,7 +63,7 @@
 
   &__options {
     width: 80%;
-    margin: 25px auto 0 auto;
+    margin: 18px  auto 0 auto;
   }
 }
 
@@ -86,18 +82,18 @@
 }
 
 .options-link-call {
-  margin-right: 99px;
+  margin-right: 95px;
 }
 
 .options-link-call::before {
-  content: url('../assets/image/main/call.svg');
+  content: url('../assets/images/main/call.svg');
   position: relative;
   top: 6px;
   margin-right: 5px;
 }
 
 .options-link-write::before {
-  content: url('../assets/image/main/whatsapp.svg');
+  content: url('../assets/images/main/whatsapp.svg');
   position: relative;
   top: 6px;
   margin-right: 5px;
@@ -105,90 +101,207 @@
 
 
 .hero-right {
-  &__img-wrapper {
-    width: 593px;
-    height: 588px;
-  }
+    width: 47.82%;
 
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+    &__image {
+        background: url("../assets/images/main/banner-img.png") no-repeat;
+        background-size: contain;
+        background-position: center;
+        max-width: 100%;
+        height: 584px;
+    }
 }
 
 
+@media (max-width: 768px) {
+    .hero {
+        &__wrapper {
+            background: url(../assets/images/main/topscreen-banner-mask.png) no-repeat;
+            background-position: 100%; 
+        }
+
+        &__wrapper-inner {
+            padding: 81px 0 70px 0;
+            position: relative;
+        }
+    }
+
+    .hero-left__inner {
+        width: 400px;
+    }
+
+    
+    .call-to-action {
+        max-width: 332px;
+
+        &__options {
+            width: 70%;
+            margin: 18px  auto 0 auto;
+          }   
+    } 
+    
+    .options-link-call {
+        margin-right: 0px;
+        margin-bottom: 25px;
+      }
+
+      .hero-left {
+
+        &__description {
+            margin: 40px 0 -22px 0;  
+        }
+
+    }
+      .hero-right {
+        width: 376px;
+        position: absolute;
+        top: 0px;
+        transform: translate(333px, 106px);
+    
+        &__image {
+            max-width: 100%;
+            height: 370px;
+        }
+    }    
+}
+
+@media (max-width: 740px) {
+  
+    .hero-left {
+        margin: 0 auto;
+        &__inner {
+            max-width: 500px;
+            
+        }  
+        &__title {
+            font-size: 36px;
+        }
+    
+    
+        &__description {
+            font-size: 16px;
+            margin: 40px 0 440px 0;
+            letter-spacing: 1px;
+            word-spacing: -3px;
+        }
+    } 
+
+    .hero-right {
+        width: 346px;
+        position: absolute;
+        top: 0;
+        transform: translate(168px, 330px);
+    
+        &__image {
+            max-width: 100%;
+            height: 341px;
+        }
+    }    
+
+}
+
+@media (max-width: 475px) {
+    .hero {
+        &__wrapper {
+            background: none;
+        }
+    }
+
+    .hero-right {
+        width: 346px;
+        position: absolute;
+        top: 0;
+        transform: translate(32px, 330px);
+
+    }    
+}
+
+@media (max-width: 425px) {
+     .hero-left {
+        &__inner {
+            max-width: 300px;
+        }
+
+        &__description {
+            font-size: 16px;
+            margin: 40px 0 365px 0;
+            letter-spacing: 1px;
+            word-spacing: -3px;
+        }
+     }
+    
+    .hero-right {
+        width: 270px;
+        position: absolute;
+        top: 0;
+        transform: translate(48px, 402px);
+        
+        &__image {
+            max-width: 100%;
+            height: 266px;
+        }
+    }
+    
+    .call-to-action__options {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .hero-left {
+        &__inner {
+            width: 330px;
+        } 
+
+        &__title {
+            max-width: 330px;
+            font-size: 24px;
+            line-height: 30px;
+            word-spacing: 5px;
+        }
+    
+        &__description {
+            @include poppins;
+            font-size: 12px;
+            line-height: 24px;
+                 
+        }
+
+    }
+
+    .hero-right {
+        width: 270px;
+        position: absolute;
+        top: 0;
+        transform: translate(23px, 275px);
+        
+        &__image {
+            max-width: 100%;
+            height: 266px;
+        }
+    }
+    
+    .call-to-action__options {
+        text-align: center;
+    }
 
 
-// @media (max-width: 360px) {
-//   .mbanner {
-//     margin: 0 auto;
-//     width: 499px;
-//     padding-top: 14px;
+}
 
-//     &__img {
-//       width: 270px;
-//       height: 266px;
-//       margin-top: 164px;
-//       margin-left: 29px;
-//     }
-
-//     &__title {
-//       position: absolute;
-//       width: 330px;
-//       height: 90px;
-//       margin-top: 20px;
-//       margin-left: 0px;
-//       font-size: 24px;
-//       line-height: 30px;
-//     }
-
-//     &__descr {
-//       width: 252px;
-//       height: 24px;
-//       margin-left: 0px;
-//       margin-top: 90px;
-//       margin-bottom: 70px;
-//       padding: 30px 0 30px;
-//       font-size: 12px;
-//     }
-
-//     //call-to-us
-
-//     &__call-to-us {
-//       width: 332px;
-//       height: 148px;
-//       padding: 12px 29px 8px 2px;
-//       margin-left: -1px;
-//       margin-top: 277px;
-//       text-align: center;
-
-//       &__title {
-//         font-size: 20px;
-//         // margin-top: 8px;
-//         // margin-left: 13px;
-//       }
-//     }
-
-//     &__on-aline {
-//       margin-left: 86px;
-//       margin-top: 0;
-//       display: block;
-
-//       &__call {
-//         margin-bottom: 20px;
-//         margin-top: 3px;
-//         margin-left: 4px;
-//         font-size: 20px;
-//       }
-
-//       &__icon {
-//         margin-right: 5px;
-//       }
-//     }
-//   }
-
-// }
+@media (max-width: 360px) {
+    .hero-right {
+        width: 270px;
+        position: absolute;
+        top: 0;
+        transform: translate(31px, 285px);
+        
+        &__image {
+            max-width: 100%;
+            height: 266px;
+        }
+    }    
+}
 
 //Navigation
 .navigation-blc {
@@ -212,7 +325,7 @@
         background: $f-color-green;
         border-radius: 80px 0px;
         display: flex;
-        align-items: center;
+        align-items: center;     
         justify-content: center;
         text-decoration: none;
         transition: 0.3s;
@@ -362,7 +475,7 @@
 
 
     .heating {
-        margin: 56px 0 156px 0;
+        margin: 56px 0 -11px 0;
 
         &_flex {
             display: flex;
@@ -669,14 +782,14 @@
 
 // planning appartment
 .planning-appartment {
-    margin-top: 155px;
+    margin-top: 41px;
 
     &__bg {
         background-image: url("../assets/images/main-page/planning_bg.png");
         background-repeat: no-repeat;
         background-size: cover;
         margin-top: 68px;
-        margin-bottom: 80px;
+        margin-bottom: -34px;
         padding: 62px 0 0 0;
     }
 
@@ -1357,7 +1470,7 @@
 
 // location_infrastructure
 .location_infrastructure {
-    margin-top: 161px;
+    margin-top: 42px;
 
     &__title {
         font-style: normal;
@@ -1771,6 +1884,8 @@
         border: 1px solid $f-color-green;
         transition: 1s;
     }
+
+      
 }
 
 @media (max-width: 1185px) {
@@ -1827,6 +1942,13 @@
         grid-column-gap: 16px;
         grid-row-gap: 20px;
     }
+}
+
+@media (max-width: 768px) {
+    .process {
+        margin-top: 111px;
+    }
+
 }
 
 @media (max-width: 650px) {
@@ -1994,7 +2116,8 @@
 @media (min-width: 561px) and (max-width: 860.98px) {
     .howToBuy {
         margin-top: 25px;
-
+        margin-bottom: 100px;
+        
         &__cards-container {
             display: grid;
             grid-template-columns: 1fr;
