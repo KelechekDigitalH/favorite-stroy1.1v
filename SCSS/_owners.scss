@@ -6,7 +6,7 @@
 }
 
 .accordion {
-    margin-bottom: 78px;
+    margin-bottom: -33px;
     background: $color-bg-dblue;
 }
 
@@ -90,7 +90,7 @@ summary::-webkit-details-marker {
 }
 
 .form-input {
-    margin: 91px 0 140px 0;
+    margin: -32px 0 140px 0;
     background: $color-bg-grey;
 }
 
@@ -205,7 +205,7 @@ summary::-webkit-details-marker {
     }
 
     .accordion {
-        margin-bottom: 60px;
+        margin-bottom: 10px;
     }
 
     .accordion__inner {
@@ -258,7 +258,7 @@ summary::-webkit-details-marker {
     }
 
     .form-input {
-        margin: 70px 0 95px 0;
+        margin: -70px 0 95px 0;
     }
 
     .form-input__name {
@@ -368,7 +368,7 @@ summary::-webkit-details-marker {
     }
 
     .form-input {
-        margin-bottom: 55px;
+        margin: -20px 0 55px 0;
     }
 
     .form-input__title {
