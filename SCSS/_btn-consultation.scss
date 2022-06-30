@@ -165,6 +165,12 @@
     }
 }
 
+@media screen and (max-width: 375.98px) {
+  .btn-consultation {
+    animation: none;
+  }
+}
+
 @media screen and (max-width: 360.98px) {
     .btn-consultation {
         margin-bottom: 60px;
@@ -185,4 +191,5 @@
             }
         }
     }
+    
 }
