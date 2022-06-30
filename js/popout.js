@@ -28,9 +28,13 @@ window.addEventListener("load", function () {
     const menuBtn2 = document.querySelector(".popup-btn2");
     const window2 = document.querySelector(".popout");
     const windowClose2 = document.querySelector(".popout__close-icon");
+    const menu = document.querySelector('.menu');
+    const burger = document.querySelector('.burger');
 
     menuBtn2.addEventListener("click", function () {
         window2.classList.toggle("active");
+        menu.classList.remove('active');
+        burger.classList.toggle('active');
     });
 
     windowClose2.addEventListener("click", function () {
