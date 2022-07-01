@@ -698,6 +698,11 @@
             margin: 15px 0 116px 0;
         }
     }
+    @media (max-width: 500px) {
+        .heating {
+            margin: 15px 0 -27px 0;
+        }
+    }
 
 }
 
@@ -1341,7 +1346,7 @@
 
 @media (min-width: 320px) and (max-width: 360.98px) {
     .planning-appartment {
-        margin-top: 59px;
+        margin-top: -20px;
 
         &__title {
             color: $color-bg-white !important;
@@ -1882,7 +1887,7 @@
         color: $f-color-green;
         background: $color-bg-white;
         border: 1px solid $f-color-green;
-        transition: 1s;
+        transition: 0.3s;
     }
 
       
@@ -2014,6 +2019,11 @@
     }
 }
 
+@media (max-width: 480px) {
+    .process__consultation {
+        animation: none;
+    }
+}
 @media (max-width: 410px) {
     .process {
         margin-top: 100px;
