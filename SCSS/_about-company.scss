@@ -519,7 +519,7 @@
         }
 
         &__img {
-            width: 330px;
+            width: 302px;
             height: 225px;
             top: 125px;
         }
@@ -544,7 +544,15 @@
         }
     }
 }
-
+@media (max-width: 360px) {
+    .mission {
+        &__img {
+            width: 330px;
+            height: 225px;
+            top: 125px;
+        }
+    }
+}
 
 .btn-consultation-about-us {
     display: inline-block;

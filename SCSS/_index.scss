@@ -1725,6 +1725,11 @@
         margin: 57px 0 55px 0;
         overflow: hidden;
         text-align: center;
+
+        iframe{
+            width:1240px;
+            height: 604px
+        }
     }
 
     &__plus {
@@ -1813,6 +1818,12 @@
         &__title-s:before {
             width: 120px;
         }
+        &__map {
+            iframe{
+                width:100%;
+                height: 604px
+            }
+        }
     }
 }
 
@@ -1842,6 +1853,10 @@
 
         &__map {
             margin: 55px 0 72px 0;
+                iframe{
+                    width:100%;
+                    height: 407px
+                }
         }
 
         &__plus {

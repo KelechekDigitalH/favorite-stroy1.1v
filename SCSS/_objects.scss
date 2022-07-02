@@ -12,7 +12,7 @@
     margin: 0 auto;
 
     &__main {
-        margin-bottom: 153px;
+        margin-bottom: 30px;
     }
 
     &__section-title {
@@ -58,12 +58,13 @@
         background-color: $f-color-green;
         border-radius: 50px;
         text-decoration: none;
-        transition: 0.4s ease;
+        transition: 0.6s;
 
         &:hover {
             border: 1px solid $f-color-green;
             background-color: $f-color-white2;
             color: $f-color-green;
+            transition: 0.6s;
         }
     }
 
@@ -78,7 +79,7 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 89px;
+        margin-bottom: 30px;
         justify-content: space-between;
         gap: 44px 20px;
     }
@@ -206,27 +207,27 @@
         max-width: 760px !important;
     }
 
-    &__clickHere-link {
-        padding: 21px 108px 21px 107px !important;
-        background-color: $f-color-green;
-        border-radius: 50px;
-        font-family: $ff-poppins;
-        text-decoration: none;
-        font-style: normal;
-        font-weight: $fw-bold;
-        font-size: 24px;
-        line-height: 46px;
-        text-align: center;
-        text-transform: uppercase;
-        color: $f-color-white1;
-        transition: 1s;
+    // &__clickHere-link {
+    //     padding: 18px 108px 18px 107px !important;
+    //     background-color: $f-color-green;
+    //     border-radius: 50px;
+    //     font-family: $ff-poppins;
+    //     text-decoration: none;
+    //     font-style: normal;
+    //     font-weight: $fw-bold;
+    //     font-size: 24px;
+    //     line-height: 46px;
+    //     text-align: center;
+    //     text-transform: uppercase;
+    //     color: $f-color-white1;
+    //     transition: 1s;
 
-        &:hover {
-            border: 1px solid $f-color-green;
-            background-color: $color-bg-white;
-            color: $f-color-green;
-        }
-    }
+    //     &:hover {
+    //         border: 1px solid $f-color-green;
+    //         background-color: $color-bg-white;
+    //         color: $f-color-green;
+    //     }
+    // }
 }
 
 // Breakpoints
@@ -285,6 +286,7 @@
 
         &__hero {
             padding-top: 77px;
+            padding-bottom: 30px;
             width: 440px;
         }
 
@@ -408,7 +410,7 @@
             }
 
             &__hero {
-                padding: 0;
+                padding: 0 0 30px 0;
             }
 
             &__hero-text-block {
