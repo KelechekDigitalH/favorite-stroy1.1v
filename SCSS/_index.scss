@@ -2175,6 +2175,20 @@
 
 }
 
+@media (max-width: 680px) {
+    
+    .process__months-btns-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 14px;
+        grid-row-gap: 10px;
+        justify-items: start;
+    }
+
+}
+
 @media (max-width: 650px) {
     .process {
         padding-top: 31px;
@@ -2193,16 +2207,6 @@
     .process__year-btn {
         width: 76px;
         height: 35px;
-    }
-
-    .process__months-btns-grid {
-        display: grid;
-
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 14px;
-        grid-row-gap: 10px;
-        justify-items: start;
     }
 
     .process__consultation-link {
