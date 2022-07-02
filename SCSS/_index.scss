@@ -200,6 +200,16 @@
 
 }
 
+@media (max-width: 480px) {
+    .hero-right {
+        width: 346px;
+        position: absolute;
+        top: 0;
+        transform: translate(37px, 330px);
+
+    }    
+}
+
 @media (max-width: 475px) {
     .hero {
         &__wrapper {
@@ -785,693 +795,887 @@
     }
 }
 
-// planning appartment
-.planning-appartment {
-    margin-top: 41px;
+// Planning appartment
 
-    &__bg {
-        background-image: url("../assets/images/main-page/planning_bg.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-top: 68px;
-        margin-bottom: -34px;
-        padding: 62px 0 0 0;
-    }
+.planning__block {
+    background-image: url("../assets/images/main-page/planning_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 70px;
+}
 
-    &__btns {
-        display: grid;
-        grid-template-columns: 295px 295px 295px 295px;
-        grid-column-gap: 20px;
-    }
+.planning-inner {
+    padding: 62px 0 81px 0;
+}
 
-    &__btn {
-        background-color: $color-bg-blue;
-        font-family: $ff-poppins;
-        font-weight: $fw-bold;
-        color: $f-color-white1;
-        border: none;
-        font-style: normal;
-        font-size: 22px;
-        line-height: 20px;
-        letter-spacing: 1px;
-        border-radius: 36px;
-        padding-top: 4.5px;
-        padding: 17px 0;
-    }
+.appartment-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    &__btn.active {
-        background-color: $color-bg-green !important;
-    }
+.appartment-btn {
+    @include poppins;
+    font-size: 22px;
+    line-height: 20px;
+    color: $color-bg-white;
+    background-color: $color-bg-blue;
+    width: 295px;
+    height: 54px;
+    border: none;
+    border-radius: 36px;
+    cursor: pointer;
+}
 
-    &__text {
-        margin: 81px 0 79px 0;
-    }
+.appartment-btn.active {
+    background-color: $color-bg-green;   
+}
 
-    &__text-h3 {
-        font-family: $ff-poppins;
-        color: $f-color-white1;
-        font-weight: $fw-bold;
-        font-style: normal;
-        width: 530px;
-        font-size: 36px;
-        line-height: 46px;
-        letter-spacing: 0.28px;
-    }
-
-    &__text-ul {
-        margin: 22px 0 0 21px;
-    }
-
-    &__text-li {
-        font-family: $ff-poppins;
-        font-style: $fw-regular;
-        color: $f-color-white1;
-        letter-spacing: 0.75px;
-        font-weight: $fw-bold;
-        font-size: 24px;
-        line-height: 34px;
-        list-style-image: url("../assets/images/main-page/Star.png");
-    }
-
-    &__text-p1 {
-        font-family: $ff-poppins;
-        color: $f-color-white1;
-        font-weight: $fw-bold;
-        font-style: normal;
-        font-size: 24px;
-        line-height: 34px;
-        margin-top: 36px;
-        margin-bottom: 0 !important;
-    }
-
-    &__text-p2 {
-        margin-top: 0;
-        font-family: $ff-poppins;
-        color: $f-color-white1;
-        font-weight: $fw-bold;
-        font-style: normal;
-        font-size: 24px;
-        line-height: 34px;
-        letter-spacing: 0.85px;
-    }
-
-    &__text-span {
-        font-size: 40px;
-        letter-spacing: 2px;
-    }
-
-    &__content {
+.appartment-content {
+    &__inner {
+        
         display: none;
     }
 
-    &__content-div {
+    &__inner.active {
+        display: block;
+    }
+
+    &__inner-wrapper {
         display: flex;
-    }
-
-    &__content.active {
-        display: block !important;
-    }
-
-    &__carousel {
-        position: absolute;
-        background-color: $color-bg-grey2;
-        border-radius: 10px;
-        width: 610px;
-        height: 339px;
+        align-items: center;
+        justify-content: space-between;
         margin-top: 80px;
-        margin-left: 630px;
-        overflow: hidden;
+    }
+    
+}
+
+.appartment-title {
+    @include poppins;
+    font-size: 36px;
+    line-height: 46px;
+    color: $color-bg-white;
+}
+
+.rooms {
+    padding-left: 0;
+    list-style: none;
+    margin: 23px 0 34px 0;
+
+    &__item {
+        @include poppins;
+        font-size: 24px;
+        line-height: 34px; 
+        color: $color-bg-white;  
     }
 
-    &__carousel-items {
-        display: flex;
-        transition: 0.5s;
+    &__item::before {
+        content: url('../assets/images/main-page/star.png');
+        position: relative;
+        bottom: 3px;
+        margin: 0 7px 0 0;
     }
 
-    &__carousel-item {
-        width: 340px;
-        margin: 14px 0;
-    }
+}
 
-    &__carousel-item img {
-        margin-left: 135px;
-    }
+.appartment-text-1 {
+    @include poppins;
+    font-size: 24px;
+    line-height: 34px;
+    text-transform: uppercase;           
+    color: $color-bg-white;
 
-    &__carousel-prev-btn {
-        position: absolute;
-        background: none;
-        margin: 144px 0 0 20px;
-        border: none;
-        z-index: 2;
-    }
-
-    &__carousel-next-btn {
-        position: absolute;
-        margin: 144px 0 0 540px;
-        background: none;
-        border: none;
-        z-index: 2;
+    &__span {
+        font-size: 40px;
+        text-transform: lowercase;
     }
 }
 
-@media (min-width: 1001px) and (max-width: 1260.98px) {
-    .planning-appartment {
-        &__text-h3 {
-            width: auto;
+.appartment-text-2 {
+    @include poppins;
+    font-size: 24px;
+    line-height: 34px;          
+    color: $color-bg-white;    
+}
+
+
+.apartment-carousel {
+    background-color: $color-bg-grey2;
+    border-radius: 10px;
+    width: 610px;
+    height: 339px;
+    margin-top: 80px;
+    margin-left: 630px;
+    overflow: hidden;
+  }
+
+
+//appartment-carousel
+
+.appartment-content__carousel {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    position: relative; 
+}
+
+.appartment-carousel {
+   
+    &__inner {
+    width: 337px;
+    height: 310;
+    margin: 14px 136px; 
+    overflow: hidden;
+    }
+
+
+    &__track {
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all ease 0.8s;
+    }
+
+    &__prev-btn {
+        position: absolute;
+        top: 0;
+        transform: translate(20px, 140px);
+        background: none;
+        border: none;
+    }
+
+    &__next-btn {
+        position: absolute;
+        top: 0;
+        transform: translate(540px, 138px);
+        background: none;
+        border: none;
+    }
+}
+
+
+@media (max-width: 1279.99px) {
+    .appartment-btns {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 20px 20px;
+    }    
+}
+
+@media (max-width: 945px) {
+    .appartment-content {
+        &__inner-wrapper {
+            flex-direction: column-reverse;
+            gap: 60px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .appartment-btns {
+        max-width: 708px;
+        gap: 20px 30px;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width: 670px) {
+    .appartment-carousel {
+   
+        &__inner {
+            margin: 14px 36px; 
         }
 
-        &__btn {
+        &__prev-btn {
+            position: absolute;
+            top: 0;
+            transform: translate(5px, 140px);
+        }
+    
+        &__next-btn {
+            position: absolute;
+            top: 0;
+            transform: translate(353px, 138px); 
+        }
+    }    
+}
+
+@media (max-width: 480px) {
+    .appartment-title {
+        font-size: 30px;
+    }
+
+    .rooms {
+        &__item {
             font-size: 20px;
         }
+    }
 
-        &__btns {
-            grid-template-columns: 295px 295px;
-            grid-column-gap: 75px;
-            grid-row-gap: 20px;
-            justify-content: center;
-        }
+    .appartment-text-1,
+    .appartment-text-2 {
+        font-size: 20px;
 
-        &__carousel {
-            position: absolute;
-            right: 45px;
-            width: 500px;
-            height: 330px;
-            margin: 40px 0;
-        }
 
-        &__content-div {
+    }
+
+    .appartment-text-1__span {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 425px) {
+
+}
+
+
+@media (max-width: 375px) {
+    .appartment-btn {
+        font-size: 16px;
+    }
+
+    .appartment-carousel {
+        &__inner {
+            width: 308px !important;
+            height: 283px;
+            margin: 7px 20px; 
+            overflow: hidden;
+            }
+        
+        &__track{
+            height: 283px;
+            width: 924px;
             display: flex;
-        }
-
-        &__text {
-            margin: 60px 0 60px 30px;
-        }
-
-        &__carousel-item {
-            margin: 23.5px 0;
-        }
-
-        &__carousel-item img {
-            width: 308px !important;
-            height: 283px;
-            margin-left: 96px;
-        }
-
-        &__carousel-prev-btn {
-            margin: 130px 0 0 20px;
-            width: 45px;
-            height: 47px;
-        }
-
-        &__carousel-next-btn {
-            margin: 130px 0 0 435px;
-            width: 45px;
-            height: 47px;
-        }
-    }
-}
-
-@media (min-width: 1001px) and (max-width: 1100.98px) {
-    .planning-appartment {
-        &__text-h3 {
-            font-size: 26px;
-            line-height: 26px;
-            letter-spacing: 0.1px;
-            margin-bottom: 20px;
-        }
-
-        &__carousel {
-            right: 30px;
-        }
-
-        &__text-ul {
-            margin: 2px 0 0 0;
-        }
-
-        &__text-li {
-            letter-spacing: 0.4px;
-            font-size: 22px;
-            line-height: 24px;
-            margin-bottom: 5px;
-        }
-
-        &__text-p1 {
-            font-size: 22px;
-            line-height: 34px;
-            letter-spacing: 0;
-            margin-top: 25px;
-        }
-
-        &__text-p2 {
-            font-size: 22px;
-            line-height: 24px;
-            margin-top: -4px !important;
-            letter-spacing: 0.4px;
-        }
-
-        &__text-span {
-            font-size: 36px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
-
-        &__text-span2 {
-            font-size: 32px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
-    }
-}
-
-@media (min-width: 735px) and (max-width: 1000.98px) {
-    .planning-appartment {
-        &__text-h3 {
-            width: auto;
-        }
-
-        &__bg {
-            margin-top: 58px;
-            margin-bottom: 74px;
-            padding: 42px 0 56px 0;
-        }
-
-        &__btns {
-            grid-template-columns: 340px 340px;
-            grid-column-gap: 30px;
-            grid-row-gap: 20px;
-            margin: 0;
-            justify-content: center;
-        }
-
-        &__btn {
-            letter-spacing: 1.1px;
-            padding: 17px 0;
-            width: 340px;
-        }
-
-        &__carousel {
             position: relative;
-            margin: 35px auto;
-            width: 710px;
-            height: 393px;
+            left: 0;
+            transition: all ease 1.5s;
         }
 
-        &__text {
-            margin: 60px 0 0 49px;
-        }
 
-        &__content-div {
-            display: block;
+        &__prev-btn {
+            position: absolute;
+            top: 0;
+            transform: translate(-6px, 126px);
         }
+    
+        &__next-btn {
+            position: absolute;
+            top: 0;
+            transform: translate(300px, 126px);
+        }
+    }
+    
+    .appartment-carousel__track .appartment-carousel__image img{
+        width: 308px!important;
+        height: 283px;
+    }
+    
+    .appartment-title {
+        font-size: 16px;
+    }
 
-        &__carousel-item {
-            width: 390px;
-            height: 360px;
-            margin: 42px 0;
+    .rooms {
+        &__item {
+            font-size: 17px;
         }
+    }
 
-        &__carousel-item img {
-            margin-left: 183.5px;
-        }
+    .appartment-text-1,
+    .appartment-text-2 {
+        font-size: 16px;
 
-        &__carousel-prev-btn {
-            margin: 168px 0 0 21px;
-            width: 62px;
-            height: 62px;
-        }
 
-        &__carousel-next-btn {
-            margin: 168px 0 0 627px;
-            width: 62px;
-            height: 62px;
-        }
+    }
+
+    .appartment-text-1__span {
+        font-size: 25px;
     }
 }
 
-@media (min-width: 590px) and (max-width: 734.98px) {
-    .planning-appartment {
-        margin-top: 59px;
 
-        &__text-h3 {
-            width: auto;
-        }
 
-        &__bg {
-            margin-top: 25px;
-            margin-bottom: 35px;
-            padding: 25px 0 30px 0;
-        }
 
-        &__btns {
-            grid-template-columns: 480px;
-            grid-column-gap: 15px;
-            grid-row-gap: 15px;
-            margin: 0 11px;
-            justify-content: center;
-        }
+// @media (max-width: 670px) {
+//     // .appartment-content__carousel {
+//     //     width: 337px;
+//     // }
 
-        &__btn {
-            letter-spacing: 0.5px;
-            font-size: 12px;
-            line-height: 18px;
-            padding: 17px 0;
-        }
+//     &__inner {
+//         width: 337px;
+//         margin: 0 auto;
+//     }
+// }
 
-        &__text {
-            margin: 27px 0;
-            margin-left: 15%;
-        }
+//     &__carousel-items {
+//         display: flex;
+//         transition: 0.5s;
+//     }
 
-        &__text-ul {
-            margin: 2px 0 0 0;
-        }
+//     &__carousel-item {
+//         width: 340px;
+//         margin: 14px 0;
+//     }
 
-        &__text-li {
-            letter-spacing: 0.4px;
-            font-size: 22px;
-            line-height: 24px;
-            list-style-image: url("../assets/images/main-page/Star\ 1.png");
-            margin-bottom: 5px;
-        }
+//     &__carousel-item img {
+//         margin-left: 135px;
+//     }
 
-        &__text-p1 {
-            font-size: 22px;
-            line-height: 34px;
-            letter-spacing: 0;
-            margin-top: 25px;
-        }
+//     &__carousel-prev-btn {
+//         position: absolute;
+//         background: none;
+//         margin: 144px 0 0 20px;
+//         border: none;
+//         z-index: 2;
+//     }
 
-        &__text-p2 {
-            font-size: 22px;
-            line-height: 24px;
-            margin-top: -4px !important;
-            letter-spacing: 0.4px;
-        }
+//     &__carousel-next-btn {
+//         position: absolute;
+//         margin: 144px 0 0 540px;
+//         background: none;
+//         border: none;
+//         z-index: 2;
+//     }
+// }
 
-        &__text-span {
-            font-size: 36px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
+// @media (min-width: 1001px) and (max-width: 1260.98px) {
+//     .planning-appartment {
+//         &__text-h3 {
+//             width: auto;
+//         }
 
-        &__text-span2 {
-            font-size: 32px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
+//         &__btn {
+//             font-size: 20px;
+//         }
 
-        &__content-div {
-            display: block;
-        }
+//         &__btns {
+//             grid-template-columns: 295px 295px;
+//             grid-column-gap: 75px;
+//             grid-row-gap: 20px;
+//             justify-content: center;
+//         }
 
-        &__carousel {
-            position: relative;
-            width: 348px;
-            height: 296px;
-            margin: 25px auto;
-            margin-bottom: 0;
-        }
+//         &__carousel {
+//             position: absolute;
+//             right: 45px;
+//             width: 500px;
+//             height: 330px;
+//             margin: 40px 0;
+//         }
 
-        &__carousel-item {
-            margin: 6px 0;
-        }
+//         &__content-div {
+//             display: flex;
+//         }
 
-        &__carousel-item img {
-            width: 308px !important;
-            height: 283px;
-            margin-left: 20px;
-        }
+//         &__text {
+//             margin: 60px 0 60px 30px;
+//         }
 
-        &__carousel-prev-btn {
-            margin: 130px 0 0 -8px;
-            width: 45px;
-            height: 47px;
-        }
+//         &__carousel-item {
+//             margin: 23.5px 0;
+//         }
 
-        &__carousel-next-btn {
-            margin: 130px 0 0 303px;
-            width: 45px;
-            height: 47px;
-        }
-    }
-}
+//         &__carousel-item img {
+//             width: 308px !important;
+//             height: 283px;
+//             margin-left: 96px;
+//         }
 
-@media (min-width: 361px) and (max-width: 589.98px) {
-    .planning-appartment {
-        margin-top: 59px;
+//         &__carousel-prev-btn {
+//             margin: 130px 0 0 20px;
+//             width: 45px;
+//             height: 47px;
+//         }
 
-        &__text-h3 {
-            width: auto;
-        }
+//         &__carousel-next-btn {
+//             margin: 130px 0 0 435px;
+//             width: 45px;
+//             height: 47px;
+//         }
+//     }
+// }
 
-        &__title {
-            color: $color-bg-white !important;
-            margin: 0 auto;
-            text-align: center;
-        }
+// @media (min-width: 1001px) and (max-width: 1100.98px) {
+//     .planning-appartment {
+//         &__text-h3 {
+//             font-size: 26px;
+//             line-height: 26px;
+//             letter-spacing: 0.1px;
+//             margin-bottom: 20px;
+//         }
 
-        &__bg-av {
-            background-image: url("../assets/images/main-page/planning_bg3_img.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-top: 25px;
-            margin-bottom: 35px;
-        }
+//         &__carousel {
+//             right: 30px;
+//         }
 
-        &__bg {
-            background: none;
-            margin-top: 0;
-            padding: 25px 0 5px 0;
-        }
+//         &__text-ul {
+//             margin: 2px 0 0 0;
+//         }
 
-        &__btns {
-            grid-template-columns: 310px;
-            justify-content: center;
-            grid-column-gap: 0;
-            grid-row-gap: 15px;
-            margin: 0;
-            margin-left: -4px;
-        }
+//         &__text-li {
+//             letter-spacing: 0.4px;
+//             font-size: 22px;
+//             line-height: 24px;
+//             margin-bottom: 5px;
+//         }
 
-        &__btn {
-            letter-spacing: 0.5px;
-            font-size: 12px;
-            line-height: 18px;
-            padding: 8.5px 0;
-        }
+//         &__text-p1 {
+//             font-size: 22px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//             margin-top: 25px;
+//         }
 
-        &__text {
-            margin: 26px 33px 28px 0;
-            margin-left: 10%;
-        }
+//         &__text-p2 {
+//             font-size: 22px;
+//             line-height: 24px;
+//             margin-top: -4px !important;
+//             letter-spacing: 0.4px;
+//         }
 
-        &__text-h3 {
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.1px;
-        }
+//         &__text-span {
+//             font-size: 36px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
 
-        &__text-ul {
-            margin: 2px 0 0 0;
-        }
+//         &__text-span2 {
+//             font-size: 32px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
+//     }
+// }
 
-        &__text-li {
-            letter-spacing: 0.4px;
-            font-size: 14px;
-            line-height: 24px;
-            list-style-image: url("../assets/images/main-page/Star\ 1.png");
-        }
+// @media (min-width: 735px) and (max-width: 1000.98px) {
+//     .planning-appartment {
+//         &__text-h3 {
+//             width: auto;
+//         }
 
-        &__text-p1 {
-            font-size: 14px;
-            line-height: 34px;
-            letter-spacing: 0;
-            margin-top: 5px;
-        }
+//         &__bg {
+//             margin-top: 58px;
+//             margin-bottom: 74px;
+//             padding: 42px 0 56px 0;
+//         }
 
-        &__text-p2 {
-            font-size: 14px;
-            line-height: 24px;
-            margin-top: -4px !important;
-            letter-spacing: 0.4px;
-        }
+//         &__btns {
+//             grid-template-columns: 340px 340px;
+//             grid-column-gap: 30px;
+//             grid-row-gap: 20px;
+//             margin: 0;
+//             justify-content: center;
+//         }
 
-        &__text-span {
-            font-size: 28px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
+//         &__btn {
+//             letter-spacing: 1.1px;
+//             padding: 17px 0;
+//             width: 340px;
+//         }
 
-        &__text-span2 {
-            font-size: 24px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
+//         &__carousel {
+//             position: relative;
+//             margin: 35px auto;
+//             width: 710px;
+//             height: 393px;
+//         }
 
-        &__content-div {
-            display: block;
-        }
+//         &__text {
+//             margin: 60px 0 0 49px;
+//         }
 
-        &__carousel {
-            position: relative;
-            width: 328px;
-            height: 296px;
-            margin: 0 auto;
-            margin-top: 25px;
-        }
+//         &__content-div {
+//             display: block;
+//         }
 
-        &__carousel-item {
-            margin: 6px 0;
-        }
+//         &__carousel-item {
+//             width: 390px;
+//             height: 360px;
+//             margin: 42px 0;
+//         }
 
-        &__carousel-item img {
-            width: 308px !important;
-            height: 283px;
-            margin-left: 10px;
-        }
+//         &__carousel-item img {
+//             margin-left: 183.5px;
+//         }
 
-        &__carousel-prev-btn {
-            margin: 130px 0 0 2px;
-            width: 45px;
-            height: 47px;
-        }
+//         &__carousel-prev-btn {
+//             margin: 168px 0 0 21px;
+//             width: 62px;
+//             height: 62px;
+//         }
 
-        &__carousel-next-btn {
-            margin: 130px 0 0 275px;
-            width: 45px;
-            height: 47px;
-        }
-    }
-}
+//         &__carousel-next-btn {
+//             margin: 168px 0 0 627px;
+//             width: 62px;
+//             height: 62px;
+//         }
+//     }
+// }
 
-@media (min-width: 320px) and (max-width: 360.98px) {
-    .planning-appartment {
-        margin-top: -20px;
+// @media (min-width: 590px) and (max-width: 734.98px) {
+//     .planning-appartment {
+//         margin-top: 59px;
 
-        &__title {
-            color: $color-bg-white !important;
-            width: 200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+//         &__text-h3 {
+//             width: auto;
+//         }
 
-        &__text-h3 {
-            width: auto;
-        }
+//         &__bg {
+//             margin-top: 25px;
+//             margin-bottom: 35px;
+//             padding: 25px 0 30px 0;
+//         }
 
-        &__bg-av {
-            background-image: url("../assets/images/main-page/planning_bg3_img.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-top: 25px;
-            padding-bottom: 1px;
-            margin-bottom: 35px;
-        }
+//         &__btns {
+//             grid-template-columns: 480px;
+//             grid-column-gap: 15px;
+//             grid-row-gap: 15px;
+//             margin: 0 11px;
+//             justify-content: center;
+//         }
 
-        &__bg {
-            background: none;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding: 25px 0 0 0;
-        }
+//         &__btn {
+//             letter-spacing: 0.5px;
+//             font-size: 12px;
+//             line-height: 18px;
+//             padding: 17px 0;
+//         }
 
-        &__btns {
-            grid-template-columns: 1fr;
-            grid-column-gap: 0;
-            grid-row-gap: 15px;
-            margin: 0;
-            margin-left: -4px;
-        }
+//         &__text {
+//             margin: 27px 0;
+//             margin-left: 15%;
+//         }
 
-        &__btn {
-            letter-spacing: 0.5px;
-            font-size: 12px;
-            line-height: 18px;
-            padding: 8.5px 0;
-        }
+//         &__text-ul {
+//             margin: 2px 0 0 0;
+//         }
 
-        &__text {
-            margin: 26px 18px 27px 18px;
-        }
+//         &__text-li {
+//             letter-spacing: 0.4px;
+//             font-size: 22px;
+//             line-height: 24px;
+//             list-style-image: url("../assets/images/main-page/Star\ 1.png");
+//             margin-bottom: 5px;
+//         }
 
-        &__text-h3 {
-            font-size: 16px;
-            line-height: 26px;
-            letter-spacing: 0.1px;
-        }
+//         &__text-p1 {
+//             font-size: 22px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//             margin-top: 25px;
+//         }
 
-        &__text-ul {
-            margin: 2px 0 0 0;
-        }
+//         &__text-p2 {
+//             font-size: 22px;
+//             line-height: 24px;
+//             margin-top: -4px !important;
+//             letter-spacing: 0.4px;
+//         }
 
-        &__text-li {
-            letter-spacing: 0.4px;
-            font-size: 14px;
-            line-height: 24px;
-            list-style-image: url("../assets/images/main-page/Star\ 1.png");
-        }
+//         &__text-span {
+//             font-size: 36px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
 
-        &__text-p1 {
-            font-size: 14px;
-            line-height: 34px;
-            letter-spacing: 0;
-            margin-top: 5px;
-        }
+//         &__text-span2 {
+//             font-size: 32px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
 
-        &__text-p2 {
-            font-size: 14px;
-            line-height: 24px;
-            margin-top: -4px !important;
-            letter-spacing: 0.4px;
-        }
+//         &__content-div {
+//             display: block;
+//         }
 
-        &__text-span {
-            font-size: 28px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
+//         &__carousel {
+//             position: relative;
+//             width: 348px;
+//             height: 296px;
+//             margin: 25px auto;
+//             margin-bottom: 0;
+//         }
 
-        &__text-span2 {
-            font-size: 24px;
-            line-height: 34px;
-            letter-spacing: 0;
-        }
+//         &__carousel-item {
+//             margin: 6px 0;
+//         }
 
-        &__content-div {
-            display: block;
-        }
+//         &__carousel-item img {
+//             width: 308px !important;
+//             height: 283px;
+//             margin-left: 20px;
+//         }
 
-        &__carousel {
-            position: relative;
-            max-width: 348px;
-            width: auto;
-            height: 296px;
-            margin: 25px auto;
-        }
+//         &__carousel-prev-btn {
+//             margin: 130px 0 0 -8px;
+//             width: 45px;
+//             height: 47px;
+//         }
 
-        &__carousel-item {
-            margin: 17px 0;
-        }
+//         &__carousel-next-btn {
+//             margin: 130px 0 0 303px;
+//             width: 45px;
+//             height: 47px;
+//         }
+//     }
+// }
 
-        &__carousel-item img {
-            width: 280px !important;
-            height: 255px;
-            margin-left: 10px;
-        }
+// @media (min-width: 361px) and (max-width: 589.98px) {
+//     .planning-appartment {
+//         margin-top: 59px;
 
-        &__carousel-prev-btn {
-            margin: 130px 0 0 2px;
-            width: 45px;
-            height: 47px;
-        }
+//         &__text-h3 {
+//             width: auto;
+//         }
 
-        &__carousel-next-btn {
-            margin: 130px 0 0 245px;
-            width: 45px;
-            height: 47px;
-        }
-    }
-}
+//         &__title {
+//             color: $color-bg-white !important;
+//             margin: 0 auto;
+//             text-align: center;
+//         }
+
+//         &__bg-av {
+//             background-image: url("../assets/images/main-page/planning_bg3_img.png");
+//             background-repeat: no-repeat;
+//             background-size: cover;
+//             padding-top: 25px;
+//             margin-bottom: 35px;
+//         }
+
+//         &__bg {
+//             background: none;
+//             margin-top: 0;
+//             padding: 25px 0 5px 0;
+//         }
+
+//         &__btns {
+//             grid-template-columns: 310px;
+//             justify-content: center;
+//             grid-column-gap: 0;
+//             grid-row-gap: 15px;
+//             margin: 0;
+//             margin-left: -4px;
+//         }
+
+//         &__btn {
+//             letter-spacing: 0.5px;
+//             font-size: 12px;
+//             line-height: 18px;
+//             padding: 8.5px 0;
+//         }
+
+//         &__text {
+//             margin: 26px 33px 28px 0;
+//             margin-left: 10%;
+//         }
+
+//         &__text-h3 {
+//             font-size: 16px;
+//             line-height: 26px;
+//             letter-spacing: 0.1px;
+//         }
+
+//         &__text-ul {
+//             margin: 2px 0 0 0;
+//         }
+
+//         &__text-li {
+//             letter-spacing: 0.4px;
+//             font-size: 14px;
+//             line-height: 24px;
+//             list-style-image: url("../assets/images/main-page/Star\ 1.png");
+//         }
+
+//         &__text-p1 {
+//             font-size: 14px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//             margin-top: 5px;
+//         }
+
+//         &__text-p2 {
+//             font-size: 14px;
+//             line-height: 24px;
+//             margin-top: -4px !important;
+//             letter-spacing: 0.4px;
+//         }
+
+//         &__text-span {
+//             font-size: 28px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
+
+//         &__text-span2 {
+//             font-size: 24px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
+
+//         &__content-div {
+//             display: block;
+//         }
+
+//         &__carousel {
+//             position: relative;
+//             width: 328px;
+//             height: 296px;
+//             margin: 0 auto;
+//             margin-top: 25px;
+//         }
+
+//         &__carousel-item {
+//             margin: 6px 0;
+//         }
+
+//         &__carousel-item img {
+//             width: 308px !important;
+//             height: 283px;
+//             margin-left: 10px;
+//         }
+
+//         &__carousel-prev-btn {
+//             margin: 130px 0 0 2px;
+//             width: 45px;
+//             height: 47px;
+//         }
+
+//         &__carousel-next-btn {
+//             margin: 130px 0 0 275px;
+//             width: 45px;
+//             height: 47px;
+//         }
+//     }
+// }
+
+// @media (min-width: 320px) and (max-width: 360.98px) {
+//     .planning-appartment {
+//         margin-top: -20px;
+
+//         &__title {
+//             color: $color-bg-white !important;
+//             width: 200px;
+//             margin: 0 auto;
+//             text-align: center;
+//         }
+
+//         &__text-h3 {
+//             width: auto;
+//         }
+
+//         &__bg-av {
+//             background-image: url("../assets/images/main-page/planning_bg3_img.png");
+//             background-repeat: no-repeat;
+//             background-size: cover;
+//             padding-top: 25px;
+//             padding-bottom: 1px;
+//             margin-bottom: 35px;
+//         }
+
+//         &__bg {
+//             background: none;
+//             margin-top: 0;
+//             margin-bottom: 0;
+//             padding: 25px 0 0 0;
+//         }
+
+//         &__btns {
+//             grid-template-columns: 1fr;
+//             grid-column-gap: 0;
+//             grid-row-gap: 15px;
+//             margin: 0;
+//             margin-left: -4px;
+//         }
+
+//         &__btn {
+//             letter-spacing: 0.5px;
+//             font-size: 12px;
+//             line-height: 18px;
+//             padding: 8.5px 0;
+//         }
+
+//         &__text {
+//             margin: 26px 18px 27px 18px;
+//         }
+
+//         &__text-h3 {
+//             font-size: 16px;
+//             line-height: 26px;
+//             letter-spacing: 0.1px;
+//         }
+
+//         &__text-ul {
+//             margin: 2px 0 0 0;
+//         }
+
+//         &__text-li {
+//             letter-spacing: 0.4px;
+//             font-size: 14px;
+//             line-height: 24px;
+//             list-style-image: url("../assets/images/main-page/Star\ 1.png");
+//         }
+
+//         &__text-p1 {
+//             font-size: 14px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//             margin-top: 5px;
+//         }
+
+//         &__text-p2 {
+//             font-size: 14px;
+//             line-height: 24px;
+//             margin-top: -4px !important;
+//             letter-spacing: 0.4px;
+//         }
+
+//         &__text-span {
+//             font-size: 28px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
+
+//         &__text-span2 {
+//             font-size: 24px;
+//             line-height: 34px;
+//             letter-spacing: 0;
+//         }
+
+//         &__content-div {
+//             display: block;
+//         }
+
+//         &__carousel {
+//             position: relative;
+//             max-width: 348px;
+//             width: auto;
+//             height: 296px;
+//             margin: 25px auto;
+//         }
+
+//         &__carousel-item {
+//             margin: 17px 0;
+//         }
+
+//         &__carousel-item img {
+//             width: 280px !important;
+//             height: 255px;
+//             margin-left: 10px;
+//         }
+
+//         &__carousel-prev-btn {
+//             margin: 130px 0 0 2px;
+//             width: 45px;
+//             height: 47px;
+//         }
+
+//         &__carousel-next-btn {
+//             margin: 130px 0 0 245px;
+//             width: 45px;
+//             height: 47px;
+//         }
+//     }
+// }
 
 // location_infrastructure
 .location_infrastructure {
@@ -2179,7 +2383,6 @@
             grid-template-columns: 1fr;
             grid-row-gap: 14px;
             margin: 25px 0;
-            margin-left: -15px;
         }
 
         &__card {
