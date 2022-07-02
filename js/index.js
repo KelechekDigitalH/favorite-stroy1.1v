@@ -23,55 +23,57 @@ planningBlock.addEventListener("click", function (e) {
     }
 });
 
-// const ybtnContainer = document.querySelector(".process__year-btns-container")
-// const yearBtn = document.querySelectorAll(".process__year-btn")
-// const monthsBtns = document.querySelectorAll(".process__months-btns")
+// Process
 
-// ybtnContainer.addEventListener("click", function (e) {
-//     const idY = e.target.dataset.id;
+const ybtnContainer = document.querySelector(".process__year-btns-container")
+const yearBtn = document.querySelectorAll(".process__year-btn")
+const monthsBtns = document.querySelectorAll(".process__months-btns")
 
-//     if (idY) {
-//         yearBtn.forEach(function (btnY) {
-//             btnY.classList.remove("active");
-//         });
+ybtnContainer.addEventListener("click", function (e) {
+    const idY = e.target.dataset.id;
 
-//         e.target.classList.add("active");
-//         processImgsClose();
-//         processBtnsOpen();
+    if (idY) {
+        yearBtn.forEach(function (btnY) {
+            btnY.classList.remove("active");
+        });
 
-//         monthsBtns.forEach(function (months) {
-//             months.classList.remove("active");
-//         });
+        e.target.classList.add("active");
+        processImgsClose();
+        processBtnsOpen();
 
-//         const yeartabConent = document.getElementById(idY);
-//         yeartabConent.classList.add("active");
-//     }
-// });
+        monthsBtns.forEach(function (months) {
+            months.classList.remove("active");
+        });
 
-// const mbtnContainer = document.querySelector(".process__months-btns-container")
-// const monthBtn = document.querySelectorAll(".process__months-btn")
-// const processImgs = document.querySelectorAll(".process__imgs")
+        const yeartabConent = document.getElementById(idY);
+        yeartabConent.classList.add("active");
+    }
+});
 
-// mbtnContainer.addEventListener("click", function (e) {
-//     const idM = e.target.dataset.id;
+const mbtnContainer = document.querySelector(".process__months-btns-container")
+const monthBtn = document.querySelectorAll(".process__months-btn")
+const processImgs = document.querySelectorAll(".process__imgs")
 
-//     if (idM) {
-//         monthBtn.forEach(function (btnM) {
-//             btnM.classList.remove("active");
-//         });
+mbtnContainer.addEventListener("click", function (e) {
+    const idM = e.target.dataset.id;
 
-//         e.target.classList.add("active");
-//         processImgsClose();
-//         processBtnsOpen();
+    if (idM) {
+        monthBtn.forEach(function (btnM) {
+            btnM.classList.remove("active");
+        });
 
-//         processImgs.forEach(function (imgs) {
-//             imgs.classList.remove("active");
-//         });
+        e.target.classList.add("active");
+        processImgsClose();
+        processBtnsOpen();
 
-//         const monthtabConent = document.getElementById(idM);
-//         monthtabConent.classList.add("active");
-//     }
-// });
+        processImgs.forEach(function (imgs) {
+            imgs.classList.remove("active");
+        });
+
+        const monthtabConent = document.getElementById(idM);
+        monthtabConent.classList.add("active");
+    }
+});
 
 
 
@@ -151,85 +153,35 @@ const checkBtns1 = () => {
 checkBtns1();
 
 
-// btnNext.forEach(btnNext => {
-//     btnNext.addEventListener('click', () => {
-//         const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-
-//         position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-//         setPosition1();
-//         checkBtns1();
-//     });
-// })
 
 
-// btnPrev1.forEach(btnPrev => {
-//     btnPrev.addEventListener('click', () => {
-//         const itemsLeft1 = Math.abs(position1) / itemWidth1;
+//process
 
-//         position1 += itemsLeft1 >= slidesToScroll1 ? movePosition1 : itemsLeft1 * itemWidth1;
+const processImgBtns = document.querySelectorAll(".process__img-btn");
+const processImg = document.querySelectorAll(".process__img1");
 
-//         setPosition1();
-//         checkBtns1();
-//     });
-// })
+processImgBtns.forEach(processImgBtn => {
+    processImgBtn.addEventListener("click", function () {
+        process.classList.add("active");
+        processImgsOpen();
+        processImgBtn.classList.add("none");
+    });
+})
 
-// const setPosition1 = () => {
-//     track1.forEach(track => {
-//         track.style.transform = `transLateX(${position1}px)`;
-//     })
-// };
+const processImgsOpen = () => {
+    processImg.forEach(processI => {
+        processI.classList.add("active");
+    })
+};
 
-// const checkBtns1 = () => {
-//     btnPrev1.forEach(btnPrev => {
-//         btnPrev.disabled = position1 === 0;
+const processImgsClose = () => {
+    processImg.forEach(processI => {
+        processI.classList.remove("active");
+    })
+};
 
-//         if (btnPrev.disabled = position1 === 0) {
-//             btnPrev.style.opacity = "0.3";
-//         } else {
-//             btnPrev.style.opacity = "1";
-//         }
-//     })
-
-//     btnNext1.forEach(btnNext => {
-//         btnNext.disabled = position1 <= -(itemsCount1 - slidesToShow1) * itemWidth1;
-
-//         if (btnNext.disabled = position1 <= -(itemsCount1 - slidesToShow1) * itemWidth1) {
-//             btnNext.style.opacity = "0.3";
-//         } else {
-//             btnNext.style.opacity = "1";
-//         }
-//     })
-// };
-
-// checkBtns1();
-
-
-// const processImgBtns = document.querySelectorAll(".process__img-btn");
-// const processImg = document.querySelectorAll(".process__img1");
-
-// processImgBtns.forEach(processImgBtn => {
-//     processImgBtn.addEventListener("click", function () {
-//         process.classList.add("active");
-//         processImgsOpen();
-//         processImgBtn.classList.add("none");
-//     });
-// })
-
-// const processImgsOpen = () => {
-//     processImg.forEach(processI => {
-//         processI.classList.add("active");
-//     })
-// };
-
-// const processImgsClose = () => {
-//     processImg.forEach(processI => {
-//         processI.classList.remove("active");
-//     })
-// };
-
-// const processBtnsOpen = () => {
-//     processImgBtns.forEach(processImgBtn => {
-//         processImgBtn.classList.remove("none");
-//     })
-// };
+const processBtnsOpen = () => {
+    processImgBtns.forEach(processImgBtn => {
+        processImgBtn.classList.remove("none");
+    })
+};
