@@ -419,12 +419,16 @@
         line-height: 28px;
     }
 
+    .menu-social__icon {
+        width: 37.41px;
+    }
+
     .menu__btn-contact {
         margin: 36px 0 35px 50px;
     }
 
     .menu-social__item + .menu-social__item {
-        margin-left: 28px;
+        margin-left: 20px;
     }
 
     .menu-social__icon {
@@ -446,7 +450,7 @@
    }
 }
 
-@media (max-width: 392px) {
+@media (max-width: 393px) {
     .menu {
         padding: 111px 46.29px 30px 55px;
     }    
