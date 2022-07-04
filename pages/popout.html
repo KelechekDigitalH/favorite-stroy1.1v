@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Popout</title>
+    <link rel="stylesheet" href="../css/all-styles.min.css" />
+    <link rel="shortcut icon" type="image/png" href="../assets/images/header/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="popout" class="popout">
+        <div class="popout__container">
+            <div class="popout__body">
+                <a href="" class="popout__close">
+                    <img class="popout__close-icon" src="../assets/images/popout-window/close_icon.png" alt="icon" />
+                </a>
+                <img class="popout__img" src="../assets/images/popout-window/popup-banner.png" alt="img" />
+                <img class="popout__logo" src="../assets/images/popout-window/popout-logo.png" alt="logo" />
+                <div class="popout__overlay"></div>
+                <div class="popout__form">
+                    <div class="popout__title">
+                        <h2 class="popout__title-title">заполните заявку</h2>
+                        <h2 class="popout__title-title">и получите спец предложение</h2>
+                    </div>
+                    <form class="form-popout">
+                        <input class="form-popout__input" type="text" name="username" placeholder="Введите ваше имя" />
+                        <input class="form-popout__input" type="tel" name="userphone" placeholder="Введите ваш номер телефона" />
+                    </form>
+                    <button type="button" class="popout-consultation__btn">Получить консультацию</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/popout.js"></script>
+    <!-- Scripts end -->
+</body>
+
+</html>
