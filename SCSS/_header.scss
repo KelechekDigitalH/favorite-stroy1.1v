@@ -9,14 +9,12 @@
     z-index: 1;
 }
 
+.header-line {
+    border-bottom: 1px solid #cfc5c524;
+}
+
 .header-up {
     background-color: $color-bg-blue;
-
-    // &__wrapper {
-    //     // width: 984px;
-    //     // height: 60px;
-    //     // position: relative;   
-    // }
     
     &__wrapper {
         background: url(../assets/images/header/heder_bg_img.png) no-repeat 80%;  
