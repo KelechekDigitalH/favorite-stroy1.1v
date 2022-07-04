@@ -175,7 +175,7 @@
             }
 
             &__text-block {
-                padding: 0px 160px 0 16px;
+                padding: 0px 49px 0 16px;
             }
 
             &__txt {
@@ -189,6 +189,64 @@
         }
     }
 }
+@media (max-width: 473px) {
+    .about-us {
+        &__banner {
+            &__text-block {
+                padding: 0px 63px 0 16px;
+            }
+        }
+    }
+}
+@media (max-width: 451px) {
+    .about-us {
+        &__banner {
+            &__text-block {
+                padding: 0px 119px 0 16px;
+            }
+        }
+    }
+}
+@media (max-width: 395px) {
+    .about-us {
+        &__banner {
+            &__text-block {
+                padding: 0px 127px 0 16px;
+            }
+        }
+    }
+}
+@media (max-width: 387px) {
+    .about-us {
+        &__banner {
+            &__text-block {
+                padding: 0px 140px 0 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 379px) {
+    .about-us {
+        &__banner {
+            &__text-block {
+                padding: 0px 157px 0 16px;
+            }
+        }
+    }
+}
+@media (max-width: 364px) {
+    .about-us {
+        &__banner {
+            &__text-block {
+                padding: 0px 160px 0 16px;
+            }
+        }
+    }
+}
+
+
+
 
 .experience {
     &__content {
@@ -378,7 +436,7 @@
     &__txt {
         font-family: $ff-poppins;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 24px;
         line-height: 40px;
         letter-spacing: 0.05em;
