@@ -1,11 +1,28 @@
-@import "vars";
+@import "./vars";
 
 .btn-consultation {
-  margin-bottom: 150px;
-  max-width: 500px;
-  margin: 0 auto;
+    margin-bottom: 150px;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: btn-consultation 1s infinite alternate-reverse;
+}
 
-  &__link {
+@keyframes btn-consultation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.btn-consultation__link {
     padding: 14px 68px 15px 68px;
     font-family: $ff-poppins;
     font-style: normal;
@@ -13,96 +30,145 @@
     font-size: 24px;
     line-height: 46px;
     text-transform: uppercase;
-    text-decoration: none;
     color: $f-color-white1;
     background: $f-color-green;
+    border: none;
     border-radius: 50px;
-    transition: 1s;
-  }
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
 }
 
-.btn-consultation__link:hover {
-  color: $f-color-green;
-  background: $color-bg-white;
-  border: 1px solid $f-color-green;
-  transition: 1s;
+.btn-consultation__link::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(750px + 12px);
+    min-height: calc(60px + 12px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
 }
 
-.btn-consultation {
-  animation: btn-consultation 1.5s infinite alternate-reverse;
+.btn-consultation__link:hover,
+.btn-consultation__link:focus {
+    color: #1A911E;
+    background: #fff;
+    border: 1px solid #1A911E;
+    transform: translateY(0px);
 }
 
-@keyframes btn-consultation {
-  0% {
-    transform: scale(0.9);
-  }
+.btn-consultation__link:hover::before,
+.btn-consultation__link:focus::before {
+    opacity: 1;
+}
 
-  100% {
-    transform: scale(1.2);
-  }
+
+.btn-consultation__link::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 6px solid #1A911E;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.btn-consultation__link:hover::after,
+.btn-consultation__link:focus::after {
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width: 768.98px) {
-  .btn-consultation {
-    margin-bottom: 100px;
-    text-align: center;
+    .btn-consultation {
+        margin-bottom: 100px;
+        text-align: center;
 
-    &__link {
-      font-size: 24px;
-      line-height: 46px;
-      border-radius: 50px;
+        &__link {
+            font-size: 24px;
+            line-height: 46px;
+            border-radius: 50px;
+        }
     }
-  }
 
-  .btn-consultation__link:hover {
-    padding: 14px 179px 15px;
-    font-size: 24px;
-    line-height: 46px;
-  }
+    .btn-consultation__link:hover {
+        padding: 14px 179px 15px;
+        font-size: 24px;
+        line-height: 46px;
+    }
 }
 
 @media screen and (max-width: 650.98px) {
-  .btn-consultation {
-    margin-bottom: 100px;
-    text-align: center;
+    .btn-consultation {
+        margin-bottom: 20px;
+        text-align: center;
 
-    &__link {
-      padding: 12px 60px;
-      font-size: 20px;
-      line-height: 40px;
-      border-radius: 50px;
+        &__link {
+            padding: 12px 60px;
+            font-size: 20px;
+            line-height: 40px;
+            border-radius: 50px;
+        }
     }
-  }
 }
 
 @media screen and (max-width: 450.98px) {
-  .btn-consultation__link {
-    padding: 10px 50px;
-    font-size: 17px;
-    line-height: 30px;
-    border-radius: 50px;
-    text-align: center;
+    .btn-consultation__link {
+        padding: 10px 50px;
+        font-size: 17px;
+        line-height: 30px;
+        border-radius: 50px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 375.98px) {
+  .btn-consultation {
+    animation: none;
   }
 }
 
 @media screen and (max-width: 360.98px) {
-  .btn-consultation {
-    margin-bottom: 60px;
-    text-align: center;
+    .btn-consultation {
+      margin-bottom: 33px;
+        text-align: center;
 
-    .btn-consultation__link {
-      padding: 10px 35px;
-      font-size: 14px;
-      line-height: 20px;
-      border-radius: 50px;
-      margin: 0 auto;
-      text-align: center;
+        .btn-consultation__link {
+            padding: 10px 35px;
+            font-size: 14px;
+            line-height: 20px;
+            border-radius: 50px;
+            margin: 0 auto;
+            text-align: center;
 
-      &:hover {
-        padding: 10px 35px;
-        font-size: 14px;
-        line-height: 20px;
-      }
+            &:hover {
+                padding: 10px 35px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
     }
-  }
+    
 }
