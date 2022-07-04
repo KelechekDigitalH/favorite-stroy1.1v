@@ -835,10 +835,23 @@
     border: none;
     border-radius: 36px;
     cursor: pointer;
+    transition: all .3s ease-in-out 0s;
+}
+
+.appartment-btn:hover {
+    background-color: $color-bg-white;
+    border: 2px solid $color-bg-blue;
+    color: $color-bg-blue;
 }
 
 .appartment-btn.active {
     background-color: $color-bg-green;   
+}
+
+.appartment-btn.active:hover {
+    background-color: $color-bg-white;
+    border: 2px solid $color-bg-green;
+    color: $color-bg-green; 
 }
 
 .appartment-content {
