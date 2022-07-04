@@ -2062,6 +2062,7 @@
         line-height: 19px;
         letter-spacing: 0.4px;
         width: 85px;
+        transition: all 0.4s ease;
     }
 
     &__months-btns-grid {
@@ -2073,9 +2074,12 @@
     }
 
     &__months-btn.active {
-        text-decoration-line: underline;
         letter-spacing: -0.5px;
         font-weight: $fw-semiBold;
+    }
+
+    &__months-btn:hover {
+        text-decoration-line: underline;
     }
 
     &__months-btns-container {
